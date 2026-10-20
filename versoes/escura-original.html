@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mais Gelada — Rede de conveniências em Estância Velha e Ivoti</title>
+<meta name="description" content="Mais Gelada: rede de conveniências com destilados premium, cervejas geladas, vinhos, gelo e carvão. Unidades em Estância Velha e Ivoti/RS, abertas todos os dias. Peça pelo WhatsApp.">
+<meta name="theme-color" content="#070d16">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mais Gelada — a mais gelada da região">
+<meta property="og:description" content="Rede de conveniências com unidades em Estância Velha e Ivoti. Destilados premium, cervejas, vinhos, gelo e tele-entrega.">
+<meta property="og:image" content="../img/parede-gelo.jpg">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070d16'/%3E%3Cpath d='M27 14h10v13h13v10H37v13H27V37H14V27h13z' fill='%23ff6a2b'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="../img/parede-gelo.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#rede",
+      "name": "Mais Gelada",
+      "description": "Rede de conveniências e bebidas com unidades em Estância Velha e Ivoti/RS.",
+      "sameAs": ["https://www.instagram.com/maisgelada.oficial/"]
+    },
+    {
+      "@type": "LiquorStore",
+      "name": "Mais Gelada Estância Velha",
+      "parentOrganization": { "@id": "#rede" },
+      "image": "../img/fachada-estancia.jpg",
+      "telephone": "+55 51 93618-3538",
+      "address": { "@type": "PostalAddress", "streetAddress": "Av. Walter Klein, 1114 - Lago Azul", "addressLocality": "Estância Velha", "addressRegion": "RS", "postalCode": "93612-280", "addressCountry": "BR" },
+      "geo": { "@type": "GeoCoordinates", "latitude": -29.6633074, "longitude": -51.1898153 },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "31" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "10:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "23:59" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "10:00", "closes": "02:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
+      ]
+    },
+    {
+      "@type": "LiquorStore",
+      "name": "Mais Gelada Ivoti",
+      "parentOrganization": { "@id": "#rede" },
+      "image": "../img/fachada-ivoti-larga.jpg",
+      "telephone": "+55 51 93619-3415",
+      "address": { "@type": "PostalAddress", "streetAddress": "Av. Pres. Lucena, 1945 - sala 3 - Harmonia", "addressLocality": "Ivoti", "addressRegion": "RS", "postalCode": "93900-991", "addressCountry": "BR" },
+      "geo": { "@type": "GeoCoordinates", "latitude": -29.6066041, "longitude": -51.1632465 },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "10:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday"], "opens": "10:00", "closes": "02:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "23:59" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "20:00" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --night:#070d16;
+  --night-2:#0b1421;
+  --night-3:#111d2e;
+  --ice:#e9f2f9;
+  --muted:rgba(233,242,249,.64);
+  --faint:rgba(233,242,249,.4);
+  --line:rgba(233,242,249,.12);
+  --frost:#8cc6ff;
+  --frost-2:#c4e3ff;
+  --flame:#ff6a2b;
+  --gutter:clamp(16px,4vw,64px);
+  --sans:'Archivo',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.7,0,.2,1);
+  --plus:polygon(35% 0,65% 0,65% 35%,100% 35%,100% 65%,65% 65%,65% 100%,35% 100%,35% 65%,0 65%,0 35%,35% 35%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--night);color:var(--ice);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+main{overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--frost);color:var(--night)}
+
+.wrap{width:100%;max-width:1400px;margin:0 auto;padding:0 var(--gutter)}
+.tag{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--frost)}
+.tag::before{content:"";width:8px;height:8px;background:var(--flame);clip-path:var(--plus)}
+.display{font-stretch:125%;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:-.025em}
+.display .lt{font-weight:300;letter-spacing:-.02em}
+.display .ice{background:linear-gradient(180deg,#fff 10%,var(--frost-2) 55%,var(--frost) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:clamp(16px,1.2vw,18px);max-width:46ch}
+.section{position:relative;padding:clamp(100px,12vw,170px) 0}
+.sec-head{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(48px,6vw,80px)}
+.sec-head h2{font-size:clamp(38px,5.2vw,84px);margin-top:22px}
+.sec-head .lead{justify-self:end}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr}.sec-head .lead{justify-self:start}}
+
+/* ---------- botões ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-stretch:112%;overflow:hidden;isolation:isolate;white-space:nowrap;transition:color .45s var(--ease),border-color .45s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;transform:translateY(101%);transition:transform .55s var(--ease)}
+.btn:hover::before{transform:none}
+.btn--flame{background:var(--flame);color:#140802}
+.btn--flame::before{background:var(--ice)}
+.btn--line{border:1px solid rgba(233,242,249,.3);color:var(--ice)}
+.btn--line::before{background:var(--ice)}
+.btn--line:hover{color:var(--night);border-color:var(--ice)}
+.btn--sm{height:46px;padding:0 20px;font-size:12px}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--frost);outline-offset:4px}
+.link{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ice);padding-bottom:6px;background:linear-gradient(var(--frost),var(--frost)) left bottom/100% 1px no-repeat;transition:background-size .5s var(--ease)}
+.link:hover{background-size:0 1px;background-position:right bottom}
+
+/* ---------- marca ---------- */
+.seal{width:44px;height:44px;flex:none}
+.brand{display:flex;align-items:center;gap:12px;line-height:1}
+.brand__txt{display:flex;flex-direction:column}
+.brand__name{font-stretch:125%;font-weight:800;font-size:19px;letter-spacing:-.01em;text-transform:uppercase}
+.brand__name b{color:var(--flame);font-weight:800}
+.brand__sub{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:6px}
+
+/* ---------- loader ---------- */
+.loader{position:fixed;inset:0;z-index:100;background:var(--night);display:grid;place-items:center}
+.loader__inner{display:flex;flex-direction:column;align-items:center;gap:26px}
+.loader svg{width:120px;height:120px}
+.loader .l-ring{fill:none;stroke:var(--frost);stroke-width:1.2}
+.loader .l-plus{fill:var(--flame);opacity:0;transform-origin:50px 50px}
+.loader__count{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--muted)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:22px 0;transition:transform .6s var(--ease),background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.is-scrolled{background:rgba(7,13,22,.78);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);padding:12px 0;border-color:var(--line)}
+.nav.is-hidden{transform:translateY(-110%)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav__links{display:flex;gap:30px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.nav__links a{color:var(--muted);transition:color .3s}
+.nav__links a:hover{color:var(--ice)}
+.nav .btn{height:44px;padding:0 20px;font-size:12px}
+@media (max-width:1060px){.nav__links{display:none}}
+@media (max-width:480px){.nav .btn span{display:none}.nav .btn{width:44px;padding:0}.seal{width:38px;height:38px}.brand__name{font-size:17px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(30px,4vw,70px);align-items:stretch;padding:120px var(--gutter) 0;max-width:1400px;margin:0 auto}
+.hero__text{display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(36px,6vh,64px);position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,7.6vw,128px);margin:26px 0 30px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .line>span{display:inline-block;will-change:transform}
+.hero h1 .l-sm{font-size:.52em}
+.hero__ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.hero__media{position:relative;border-radius:22px 22px 0 0;overflow:hidden;background:var(--night-3);align-self:stretch;min-height:520px}
+.hero__media img{position:absolute;inset:0;width:100%;height:112%;object-fit:cover;object-position:center 18%;will-change:transform}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,22,.15),rgba(7,13,22,0) 40%,rgba(7,13,22,.6) 100%)}
+.frost{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(120% 80% at 50% 30%,rgba(196,227,255,.55),rgba(140,198,255,.25) 50%,rgba(233,242,249,.6));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0}
+.hero__chip{position:absolute;z-index:3;left:18px;right:18px;bottom:18px;padding:14px 16px;border-radius:14px;background:rgba(7,13,22,.62);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(233,242,249,.14);font-size:13px}
+.hero__chip strong{display:block;font-stretch:115%;font-size:14px;letter-spacing:.02em;margin-bottom:8px}
+.hero__chip ul{list-style:none;display:grid;gap:6px}
+.hero__chip li{display:flex;justify-content:space-between;gap:12px;color:var(--muted)}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ice);white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#5fe08f;box-shadow:0 0 0 0 rgba(95,224,143,.6);animation:pulse 1.8s infinite;flex:none}
+.dot.closed{background:var(--faint);animation:none}
+@keyframes pulse{to{box-shadow:0 0 0 9px rgba(95,224,143,0)}}
+.hero__units{display:grid;grid-template-columns:1fr 1fr;margin-top:44px;border-top:1px solid var(--line)}
+.hu{display:block;padding:18px 18px 4px 0;transition:background .3s}
+.hu+.hu{padding-left:18px;border-left:1px solid var(--line)}
+.hu small{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.hu small em{font-style:normal;padding:2px 7px;border-radius:999px;background:var(--flame);color:#140802;letter-spacing:.08em;font-size:10px}
+.hu strong{display:flex;align-items:center;gap:10px;margin:8px 0 6px;font-stretch:118%;font-size:19px;font-weight:700}
+.hu strong svg{width:16px;height:16px;color:var(--frost);transition:transform .4s var(--ease)}
+.hu:hover strong svg{transform:translateX(5px)}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:0;padding:0;min-height:0}
+  .hero__media{order:-1;height:56svh;min-height:380px;border-radius:0}
+  .hero__media img{object-position:center 12%}
+  .hero__media::after{background:linear-gradient(180deg,rgba(7,13,22,.6) 0%,rgba(7,13,22,0) 28%,rgba(7,13,22,0) 55%,var(--night) 100%)}
+  .hero__chip{display:none}
+  .hero__text{padding:0 var(--gutter) 44px;margin-top:-70px}
+  .hero h1{font-size:min(14vw,96px)}
+  .hero__units{margin-top:32px}
+  .hu strong{font-size:17px}
+  .hu .status{font-size:11px;white-space:normal}
+}
+
+/* ---------- marquee ---------- */
+.ticker{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--night-2)}
+.ticker__track{display:flex;width:max-content;will-change:transform}
+.ticker__item{display:flex;align-items:center;gap:36px;padding-right:36px;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(20px,2.4vw,34px);letter-spacing:-.01em;white-space:nowrap}
+.ticker__item .o{color:transparent;-webkit-text-stroke:1px rgba(233,242,249,.5)}
+.ticker__item i{width:14px;height:14px;flex:none;background:var(--flame);clip-path:var(--plus)}
+
+/* ---------- manifesto ---------- */
+.about__grid{display:grid;grid-template-columns:.7fr 2fr;gap:clamp(30px,6vw,100px)}
+.about__text{font-weight:300;font-size:clamp(26px,3.3vw,50px);line-height:1.16;letter-spacing:-.02em}
+.about__text .w{opacity:.14}
+.about__text b{font-weight:700;font-stretch:118%;color:var(--frost-2)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(70px,9vw,120px);border-top:1px solid var(--line)}
+.stat{padding:30px 24px 0 0}
+.stat+.stat{padding-left:24px;border-left:1px solid var(--line)}
+.stat__num{font-stretch:125%;font-weight:800;font-size:clamp(42px,4.6vw,74px);line-height:1;letter-spacing:-.03em}
+.stat__num small{font-size:.42em;font-weight:500;letter-spacing:0;color:var(--frost);margin-left:4px}
+.stat__label{margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:860px){
+  .about__grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:26px 14px 26px 0}
+  .stat+.stat{padding-left:14px}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* ---------- unidades ---------- */
+.units{background:linear-gradient(180deg,var(--night) 0%,var(--night-2) 100%)}
+.units__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,28px)}
+.ucard{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--night-3);transition:border-color .5s,box-shadow .5s}
+.ucard.is-near{border-color:var(--frost);box-shadow:0 0 0 1px var(--frost),0 30px 80px -30px rgba(140,198,255,.35)}
+.ucard__media{position:relative;aspect-ratio:16/9;overflow:hidden}
+.ucard__media img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover}
+.ucard__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,22,0) 50%,rgba(17,29,46,.95) 100%)}
+.ucard__badges{position:absolute;z-index:2;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(7,13,22,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(233,242,249,.16);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.pill--flame{background:var(--flame);color:#140802;border-color:var(--flame)}
+.pill--near{display:none;background:var(--frost);color:var(--night);border-color:var(--frost)}
+.ucard.is-near .pill--near{display:inline-flex}
+.ucard__body{padding:4px clamp(22px,2.4vw,34px) clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:18px;flex:1}
+.ucard__n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--frost)}
+.ucard h3{margin-top:8px;font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(30px,3.2vw,50px);line-height:.95;letter-spacing:-.025em}
+.ucard dl{display:grid;gap:10px;padding:18px 0;border-block:1px solid var(--line)}
+.ucard dl div{display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:15px}
+.ucard dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding-top:3px}
+.ucard dd .stars{display:inline-flex;gap:2px;color:var(--flame);vertical-align:-1px;margin-right:6px}
+.ucard dd .stars svg{width:13px;height:13px}
+.ucard__ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.near{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;padding:18px 22px;border-radius:16px;border:1px dashed rgba(140,198,255,.35)}
+.near p{color:var(--muted);font-size:15px}
+.near p strong{color:var(--ice)}
+@media (max-width:860px){.units__grid{grid-template-columns:1fr}.ucard dl div{grid-template-columns:84px 1fr}}
+
+/* ---------- seleção (rolagem horizontal) ---------- */
+.sel{background:var(--night-2);padding:clamp(100px,11vw,150px) 0;overflow:hidden}
+.sel__pin{display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.sel .sec-head{margin-bottom:clamp(28px,3.5vh,48px)}
+.sel .sec-head h2{font-size:clamp(36px,4.4vw,70px)}
+.sel__track{display:flex;gap:clamp(14px,1.6vw,24px);padding:0 var(--gutter);width:max-content;will-change:transform}
+.card{position:relative;flex:none;height:min(58vh,500px);min-height:340px;aspect-ratio:3/4.1;border-radius:18px;overflow:hidden;background:var(--night-3)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.card:hover img{transform:scale(1.05)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,13,22,.35) 0%,rgba(7,13,22,0) 30%,rgba(7,13,22,.92) 100%)}
+.card__body{position:absolute;z-index:2;left:22px;right:22px;bottom:22px}
+.card__n{position:absolute;z-index:2;top:20px;left:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--frost-2)}
+.card h3{font-stretch:125%;font-weight:800;text-transform:uppercase;font-size:clamp(24px,2.1vw,32px);line-height:.98;letter-spacing:-.02em}
+.card p{margin-top:12px;color:var(--muted);font-size:15px;line-height:1.5}
+.card--cta{background:var(--flame);color:#140802;display:flex;flex-direction:column;justify-content:space-between;padding:26px}
+.card--cta::after{display:none}
+.card--cta h3{font-size:clamp(30px,2.8vw,42px)}
+.card--cta p{color:rgba(20,8,2,.72);margin-bottom:22px}
+.card--cta .btn{background:#140802;color:var(--ice);align-self:flex-start}
+.card--cta .btn::before{background:var(--ice)}
+.card--cta .btn:hover{color:#140802}
+.card--cta .big-plus{width:84px;height:84px;background:#140802;clip-path:var(--plus)}
+.sel__hint{display:flex;align-items:center;gap:14px;margin-top:30px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.sel__bar{flex:1;max-width:260px;height:1px;background:var(--line);overflow:hidden}
+.sel__bar i{display:block;height:100%;background:var(--frost);transform-origin:left;transform:scaleX(0)}
+@media (max-width:860px){
+  .sel__pin{min-height:0}
+  .sel__track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+  .sel__track::-webkit-scrollbar{display:none}
+  .card{height:auto;min-height:0;width:76vw;scroll-snap-align:center}
+  .sel__hint .sel__bar{display:none}
+}
+
+/* ---------- padrão (galeria) ---------- */
+.loja__grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(70px,7.4vw,108px);gap:14px}
+.ph{position:relative;margin:0;overflow:hidden;border-radius:16px;background:var(--night-3);cursor:zoom-in}
+.ph img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;transition:filter .6s}
+.ph:hover img{filter:brightness(1.08)}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:10px;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(7,13,22,.82));font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.ph figcaption span{color:var(--frost)}
+.ph--1{grid-column:1/6;grid-row:1/8}
+.ph--2{grid-column:6/9;grid-row:1/5}
+.ph--3{grid-column:9/13;grid-row:1/5}
+.ph--4{grid-column:6/10;grid-row:5/8}
+.ph--5{grid-column:10/13;grid-row:5/8}
+@media (max-width:860px){
+  .loja__grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px}
+  .ph{grid-column:auto;grid-row:span 2}
+  .ph--1{grid-column:span 2;grid-row:span 3}
+  .ph--5{grid-column:span 2;grid-row:span 2}
+  .ph figcaption{flex-direction:column;gap:2px;padding:36px 14px 12px}
+}
+
+/* ---------- avaliações ---------- */
+.reviews{background:var(--night-2)}
+.reviews__grid{display:grid;grid-template-columns:.9fr 2fr;gap:clamp(40px,7vw,110px);align-items:start}
+.score__num{font-stretch:125%;font-weight:800;font-size:clamp(110px,13vw,200px);line-height:.85;letter-spacing:-.05em;margin-top:30px}
+.score .stars{display:flex;gap:6px;margin:24px 0 12px;color:var(--flame)}
+.score .stars svg{width:20px;height:20px}
+.score small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.quote{padding:32px 0;border-top:1px solid var(--line)}
+.quote:last-child{border-bottom:1px solid var(--line)}
+.quote q{display:block;font-weight:300;font-size:clamp(24px,2.6vw,38px);line-height:1.2;letter-spacing:-.015em;quotes:"“" "”"}
+.quote small{display:block;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+@media (max-width:860px){.reviews__grid{grid-template-columns:1fr}}
+
+/* ---------- como pedir ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stepc{position:relative;padding:34px 30px 38px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(140,198,255,.07),rgba(140,198,255,0) 60%)}
+.stepc__n{font-stretch:125%;font-weight:800;font-size:64px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(140,198,255,.55)}
+.stepc h3{font-stretch:118%;font-weight:700;font-size:clamp(22px,2vw,28px);line-height:1.1;margin:26px 0 12px;letter-spacing:-.01em}
+.stepc p{color:var(--muted);max-width:34ch}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+
+/* ---------- visite ---------- */
+.visit__grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,5vw,80px);align-items:stretch}
+.visit h2{font-size:clamp(38px,5vw,80px);margin:22px 0 30px}
+.tabs{display:inline-flex;gap:4px;padding:4px;margin-bottom:26px;border-radius:999px;border:1px solid var(--line);background:var(--night-2)}
+.tabs button{height:42px;padding:0 20px;border-radius:999px;font-stretch:112%;font-weight:600;font-size:14px;color:var(--muted);transition:background .4s,color .4s}
+.tabs button[aria-selected="true"]{background:var(--ice);color:var(--night)}
+.info{border-top:1px solid var(--line)}
+.info__row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.info__row dt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--frost);padding-top:4px}
+.info__row dd{font-size:16px;font-weight:500}
+.info__row dd small{display:block;color:var(--muted);font-size:14px;font-weight:400;margin-top:2px}
+.hours{list-style:none;display:grid;gap:2px}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:5px 10px;margin:0 -10px;border-radius:8px;color:var(--muted);font-size:15px}
+.hours li span:last-child{font-family:var(--mono);font-size:13px}
+.hours li.today{background:rgba(140,198,255,.1);color:var(--ice)}
+.hours li.today span:first-child::after{content:" · hoje";color:var(--frost);font-family:var(--mono);font-size:11px;letter-spacing:.08em}
+.info .status{margin-top:12px}
+.map{position:relative;overflow:hidden;min-height:520px;border-radius:20px;background:var(--night-3)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.9) sepia(.35) hue-rotate(175deg) saturate(1.6) contrast(.9)}
+.map__pin{position:absolute;left:16px;right:16px;bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:rgba(7,13,22,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line)}
+.map__pin strong{display:block;font-stretch:118%;font-weight:700;font-size:16px}
+.map__pin span{font-size:13px;color:var(--muted)}
+.map__pin .btn{flex:none}
+@media (max-width:860px){.visit__grid{grid-template-columns:1fr}.info__row{grid-template-columns:92px 1fr;gap:14px}.map{min-height:400px}}
+@media (max-width:440px){.map__pin{flex-direction:column;align-items:stretch}.hours li{margin:0}.tabs{display:flex}.tabs button{flex:1;padding:0 10px}}
+
+/* ---------- franquia ---------- */
+.fr{position:relative;overflow:hidden;border-radius:28px;margin:0 var(--gutter);max-width:1400px;padding:clamp(48px,7vw,100px) clamp(24px,6vw,90px);background:radial-gradient(90% 120% at 100% 0%,rgba(255,106,43,.28),rgba(255,106,43,0) 60%),linear-gradient(135deg,#0f2440,#0a1626 60%);border:1px solid rgba(140,198,255,.18);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
+.fr-wrap{padding-bottom:clamp(100px,12vw,170px)}
+@media (min-width:1528px){.fr{margin:0 auto}}
+.fr h2{font-size:clamp(36px,5vw,78px);margin-top:20px}
+.fr p{color:var(--muted);max-width:42ch;margin-bottom:28px}
+.fr__plus{position:absolute;right:-60px;top:-60px;width:320px;height:320px;background:rgba(255,106,43,.08);clip-path:var(--plus);pointer-events:none}
+@media (max-width:860px){.fr{grid-template-columns:1fr;border-radius:22px}}
+@media (max-width:400px){.fr{padding:44px 20px}.fr h2{font-size:clamp(28px,9vw,36px)}.fr .btn{width:100%;padding:0 16px;font-size:12px}}
+.fr>div{min-width:0}
+
+/* ---------- final ---------- */
+.final{position:relative;overflow:hidden;text-align:center;padding:clamp(130px,17vw,230px) 0}
+.final__media{position:absolute;inset:0}
+.final__media img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.final__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--night) 0%,rgba(7,13,22,.82) 30%,rgba(7,13,22,.82) 70%,var(--night) 100%)}
+.final .wrap{position:relative;z-index:1}
+.final h2{font-size:clamp(46px,8.4vw,140px);margin:24px auto 26px}
+.final .lead{margin:0 auto 40px}
+.magnet{display:inline-block}
+.final .btn{height:66px;padding:0 38px;font-size:14px}
+
+/* ---------- rodapé ---------- */
+.footer{padding:80px 0 34px;border-top:1px solid var(--line)}
+.footer__top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:56px}
+.footer__brand .seal{width:56px;height:56px}
+.footer__brand .brand__name{font-size:26px}
+.footer__brand p{margin-top:18px;color:var(--muted);max-width:36ch;font-size:15px}
+.footer__cols{display:flex;gap:clamp(40px,6vw,80px);flex-wrap:wrap}
+.footer__cols h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--frost);margin-bottom:18px;font-weight:500}
+.footer__cols a,.footer__cols p{display:block;color:var(--muted);margin-bottom:10px;font-size:15px;transition:color .3s}
+.footer__cols p b{display:block;color:var(--ice);font-weight:600}
+.footer__cols a:hover{color:var(--ice)}
+.legal{display:flex;align-items:center;gap:16px;padding:22px 0;border-top:1px solid var(--line);font-size:14px}
+.legal b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--flame);color:var(--flame);font-family:var(--mono);font-size:12px;font-weight:500;flex:none}
+.footer__bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--faint)}
+.footer__bottom a{color:var(--muted)}
+.footer__bottom a:hover{color:var(--ice)}
+
+/* ---------- whatsapp flutuante ---------- */
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--flame);color:#140802;display:grid;place-items:center;box-shadow:0 14px 40px rgba(0,0,0,.45);transform:scale(0);transition:transform .5s cubic-bezier(.3,1.5,.5,1),background .3s}
+.fab:hover{background:var(--ice)}
+.fab.is-in{transform:scale(1)}
+.fab svg{width:26px;height:26px}
+
+/* ---------- escolher unidade ---------- */
+.pick{position:fixed;inset:0;z-index:90;display:none;place-items:center;padding:20px;background:rgba(7,13,22,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.pick.is-open{display:grid}
+.pick__card{position:relative;width:100%;max-width:480px;background:var(--night-2);border:1px solid var(--line);border-radius:24px;padding:34px 26px 26px}
+.pick__card h2{font-stretch:118%;font-weight:700;font-size:28px;line-height:1.1;letter-spacing:-.01em;margin:16px 0 6px}
+.pick__card>p{color:var(--muted);font-size:15px;margin-bottom:22px}
+.pick__opt{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border-radius:16px;border:1px solid var(--line);transition:border-color .3s,background .3s}
+.pick__opt+.pick__opt{margin-top:10px}
+.pick__opt:hover{border-color:var(--flame);background:rgba(255,106,43,.06)}
+.pick__opt strong{display:flex;align-items:center;gap:10px;font-stretch:118%;font-size:18px}
+.pick__opt strong em{font-style:normal;padding:2px 7px;border-radius:999px;background:var(--flame);color:#140802;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.pick__opt .status{margin-top:6px;font-size:11px}
+.pick__go{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--flame);color:#140802;flex:none}
+.pick__go svg{width:20px;height:20px}
+.pick__x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);font-size:18px}
+
+/* ---------- 18+ ---------- */
+.age{position:fixed;inset:0;z-index:95;display:none;place-items:center;padding:20px;background:rgba(7,13,22,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.age.is-open{display:grid}
+.age__card{width:100%;max-width:460px;background:var(--night-2);border:1px solid var(--line);border-radius:24px;padding:44px 32px 36px;text-align:center}
+.age__card .seal{width:64px;height:64px;margin:0 auto 26px}
+.age__card h2{font-stretch:118%;font-weight:700;font-size:30px;line-height:1.1;letter-spacing:-.01em}
+.age__card p{color:var(--muted);margin:14px 0 28px;font-size:15px}
+.age__btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.age__legal{margin-top:24px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:96;display:none;place-items:center;padding:24px;background:rgba(7,13,22,.95);cursor:zoom-out}
+.lb.is-open{display:grid}
+.lb img{max-width:100%;max-height:88vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb button{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);font-size:20px;line-height:1}
+
+[data-reveal]{opacity:0;transform:translateY(34px)}
+.reduced [data-reveal]{opacity:1;transform:none}
+.reduced .about__text .w{opacity:1}
+.reduced .fab{transition:none}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="iceGrad" cx="38%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#5aa8ee"/>
+      <stop offset=".55" stop-color="#2a6fbf"/>
+      <stop offset="1" stop-color="#173f7a"/>
+    </radialGradient>
+    <symbol id="mark" viewBox="0 0 100 100">
+      <path fill="url(#iceGrad)" stroke="#c4e3ff" stroke-width="1.2" d="M50.0 2.6 L57.7 8.8 L67.6 4.5 L71.9 14.6 L82.0 14.9 L83.6 24.7 L91.7 29.2 L90.2 38.6 L97.7 45.6 L92.6 53.9 L94.5 62.7 L86.8 68.3 L86.9 77.9 L78.9 81.7 L75.3 90.9 L64.5 87.4 L59.0 98.1 L50.0 93.4 L41.2 97.1 L34.8 89.3 L25.5 89.5 L23.0 79.6 L12.0 78.7 L14.0 67.9 L5.2 62.7 L9.3 53.8 L4.1 45.7 L10.0 38.6 L7.6 28.9 L15.7 24.1 L18.0 14.9 L27.8 14.1 L32.8 5.7 L42.2 8.4Z"/>
+      <path fill="#ff6a2b" d="M43 24h14v19h19v14H57v19H43V57H24V43h19z"/>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91A9.9 9.9 0 0 0 12.04 2Zm5.8 14.03c-.25.69-1.44 1.33-2 1.38-.51.05-1 .24-3.36-.7-2.84-1.12-4.63-4.04-4.77-4.23-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.74-.35l.53.01c.17 0 .4-.06.62.48.25.6.84 2.07.92 2.22.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.3 2.36 1.45.29.15.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.38-.24.65-.15.26.1 1.68.79 1.97.94.29.14.48.21.55.33.07.12.07.69-.18 1.37Z"/></symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 2.5h10A4.5 4.5 0 0 1 21.5 7v10a4.5 4.5 0 0 1-4.5 4.5H7A4.5 4.5 0 0 1 2.5 17V7A4.5 4.5 0 0 1 7 2.5Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.6l-6.4 3.5L7 14l-5.3-5 7.2-.9z"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path stroke="currentColor" stroke-width="1.6" d="M12 2v4M12 18v4M2 12h4M18 12h4"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ 18+ ============ -->
+<div class="age" id="age" role="dialog" aria-modal="true" aria-labelledby="age-title">
+  <div class="age__card">
+    <svg class="seal" aria-hidden="true"><use href="#mark"/></svg>
+    <h2 id="age-title">Tu tem 18 anos ou mais?</h2>
+    <p>Este site apresenta bebidas alcoólicas. Confirme sua idade para entrar.</p>
+    <div class="age__btns">
+      <button class="btn btn--flame" id="age-yes">Sim, tenho 18+</button>
+      <a class="btn btn--line" href="https://www.google.com">Ainda não</a>
+    </div>
+    <p class="age__legal">Venda proibida para menores de 18 anos</p>
+  </div>
+</div>
+
+<!-- ============ ESCOLHER UNIDADE ============ -->
+<div class="pick" id="pick" role="dialog" aria-modal="true" aria-labelledby="pick-title">
+  <div class="pick__card">
+    <button class="pick__x" type="button" aria-label="Fechar">✕</button>
+    <span class="tag">Pedir pelo WhatsApp</span>
+    <h2 id="pick-title">Pra qual loja?</h2>
+    <p>Escolhe a unidade mais perto de ti. A conversa abre direto no WhatsApp da loja.</p>
+    <div id="pick-list"></div>
+  </div>
+</div>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg viewBox="0 0 100 100">
+      <path class="l-ring" pathLength="1" d="M50.0 2.6 L57.7 8.8 L67.6 4.5 L71.9 14.6 L82.0 14.9 L83.6 24.7 L91.7 29.2 L90.2 38.6 L97.7 45.6 L92.6 53.9 L94.5 62.7 L86.8 68.3 L86.9 77.9 L78.9 81.7 L75.3 90.9 L64.5 87.4 L59.0 98.1 L50.0 93.4 L41.2 97.1 L34.8 89.3 L25.5 89.5 L23.0 79.6 L12.0 78.7 L14.0 67.9 L5.2 62.7 L9.3 53.8 L4.1 45.7 L10.0 38.6 L7.6 28.9 L15.7 24.1 L18.0 14.9 L27.8 14.1 L32.8 5.7 L42.2 8.4Z"/>
+      <path class="l-plus" d="M43 24h14v19h19v14H57v19H43V57H24V43h19z"/>
+    </svg>
+    <div class="loader__count"><span id="loader-n">0</span>%</div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Mais Gelada — início">
+      <svg class="seal" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand__txt"><span class="brand__name"><b>+</b>Gelada</span><span class="brand__sub">Rede de conveniências</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#unidades">Unidades</a>
+      <a href="#selecao">Seleção</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#visite">Horários</a>
+      <a href="#franquia">Franquia</a>
+    </nav>
+    <a class="btn btn--line js-pick" href="#unidades"><svg><use href="#wa"/></svg><span>Pedir agora</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__text">
+    <span class="tag hero-in">Rede de conveniências · Estância Velha · Ivoti</span>
+    <h1 class="display">
+      <span class="line l-sm"><span class="lt">A mais</span></span>
+      <span class="line"><span class="ice">gelada</span></span>
+      <span class="line l-sm"><span class="lt">da região,</span></span>
+      <span class="line l-sm"><span>perto de ti.</span></span>
+    </h1>
+    <p class="lead hero-in">Destilados premium, cervejas trincando, vinhos, gelo e conveniência. Duas lojas com o mesmo padrão Mais Gelada, abertas todos os dias.</p>
+    <div class="hero__ctas hero-in">
+      <span class="magnet"><a class="btn btn--flame js-pick" href="#unidades"><svg><use href="#wa"/></svg>Pedir pelo WhatsApp</a></span>
+      <a class="btn btn--line" href="#unidades"><svg><use href="#pin"/></svg>Ver unidades</a>
+    </div>
+    <div class="hero__units hero-in" id="hero-units"></div>
+  </div>
+  <div class="hero__media" id="hero-media">
+    <img src="../img/parede-gelo.jpg" alt="Interior da Mais Gelada: parede de gelo com o logo e prateleiras de destilados" fetchpriority="high" width="956" height="1700">
+    <div class="frost" id="frost"></div>
+    <div class="hero__chip"><strong>Agora na rede</strong><ul id="chip-list"></ul></div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <div class="ticker__item">Estância Velha <i></i> <span class="o">Ivoti</span> <i></i> Destilados <i></i> <span class="o">Cervejas</span> <i></i> Vinhos <i></i> <span class="o">Gelo</span> <i></i> Tele-entrega <i></i></div>
+    <div class="ticker__item">Estância Velha <i></i> <span class="o">Ivoti</span> <i></i> Destilados <i></i> <span class="o">Cervejas</span> <i></i> Vinhos <i></i> <span class="o">Gelo</span> <i></i> Tele-entrega <i></i></div>
+  </div>
+</div>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="section" id="sobre">
+  <div class="wrap">
+    <div class="about__grid">
+      <div><span class="tag" data-reveal>A rede Mais Gelada</span></div>
+      <p class="about__text" id="about-text">Bebida boa tem que chegar no <b>ponto certo.</b> Em toda unidade Mais Gelada a geladeira é o coração da loja e a prateleira é uma <b>curadoria</b> — do whisky para presentear à cerveja do fim de tarde, tudo pronto para sair <b>trincando.</b></p>
+    </div>
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="stat__num"><span data-count="2" data-pad="2">02</span></div><div class="stat__label">Unidades na rede</div></div>
+      <div class="stat"><div class="stat__num">4,8<small>★</small></div><div class="stat__label">Nota no Google</div></div>
+      <div class="stat"><div class="stat__num"><span data-count="7">7</span><small>dias</small></div><div class="stat__label">Abertas toda a semana</div></div>
+      <div class="stat"><div class="stat__num">4,6<small>mil+</small></div><div class="stat__label">Seguidores no Instagram</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UNIDADES ============ -->
+<section class="section units" id="unidades">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="tag" data-reveal>Nossas unidades</span>
+        <h2 class="display" data-reveal><span class="lt">Escolhe</span><br><span class="ice">a tua loja.</span></h2>
+      </div>
+      <p class="lead" data-reveal>Endereço, horário de hoje e WhatsApp de cada loja. O status de aberto ou fechado é atualizado na hora.</p>
+    </div>
+    <div class="units__grid" id="units-grid"></div>
+    <div class="near" data-reveal>
+      <p id="near-text"><strong>Não sabe qual fica mais perto?</strong> A gente calcula pela tua localização. Nada é salvo.</p>
+      <button class="btn btn--line btn--sm" id="near-btn" type="button"><svg><use href="#locate"/></svg>Achar a mais perto</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELEÇÃO (horizontal) ============ -->
+<section class="sel" id="selecao">
+  <div class="sel__pin" id="sel-pin">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="tag" data-reveal>A seleção</span>
+          <h2 class="display" data-reveal><span class="lt">Do rótulo</span><br>premium <span class="lt">ao</span><br><span class="ice">gelo.</span></h2>
+        </div>
+        <p class="lead" data-reveal>Rótulos para presentear, geladeiras sempre abastecidas e tudo o que falta para a noite render. Fotos reais das nossas lojas.</p>
+      </div>
+    </div>
+    <div class="sel__track" id="sel-track">
+      <article class="card"><img src="../img/royal-salute.jpg" alt="Garrafa de Royal Salute 21 anos com a caixa decorada" loading="lazy" width="900" height="1600"><span class="card__n">01</span><div class="card__body"><h3>Destilados premium</h3><p>Rótulos especiais para brindar ou presentear.</p></div></article>
+      <article class="card"><img src="../img/monkey-shoulder.jpg" alt="Garrafas de Monkey Shoulder e Gentleman Jack" loading="lazy" width="900" height="1600"><span class="card__n">02</span><div class="card__body"><h3>Whiskies &amp; bourbons</h3><p>Do blend do dia a dia ao malte que vale a ocasião.</p></div></article>
+      <article class="card"><img src="../img/belvedere.jpg" alt="Garrafas de vodka Belvedere" loading="lazy" width="900" height="1600"><span class="card__n">03</span><div class="card__body"><h3>Vodkas &amp; gins</h3><p>Para o drink sair do jeito certo.</p></div></article>
+      <article class="card"><img src="../img/geladeiras.jpg" alt="Geladeiras de portas de vidro cheias de cervejas e energéticos" loading="lazy" width="900" height="1600"><span class="card__n">04</span><div class="card__body"><h3>Cervejas trincando</h3><p>Geladeiras abastecidas, da long neck ao fardo.</p></div></article>
+      <article class="card"><img src="../img/gelo.jpg" alt="Saco de gelo com latas de cerveja em frente às prateleiras" loading="lazy" width="956" height="1700"><span class="card__n">05</span><div class="card__body"><h3>Gelo &amp; carvão</h3><p>O básico que não pode faltar no churrasco e na festa.</p></div></article>
+      <article class="card"><img src="../img/congelados.jpg" alt="Freezer de congelados e gôndola de doces e snacks" loading="lazy" width="900" height="1600"><span class="card__n">06</span><div class="card__body"><h3>Conveniência</h3><p>Congelados, snacks, água e refri — tudo numa parada só.</p></div></article>
+      <article class="card card--cta"><span class="big-plus" aria-hidden="true"></span><div><h3>Monta teu pedido</h3><p>Manda a lista no WhatsApp da tua loja que a gente separa.</p><a class="btn js-pick" href="#unidades"><svg><use href="#wa"/></svg>Chamar agora</a></div></article>
+    </div>
+    <div class="wrap"><div class="sel__hint"><span>Role para ver</span><span class="sel__bar"><i id="sel-bar"></i></span><span>06 categorias</span></div></div>
+  </div>
+</section>
+
+<!-- ============ PADRÃO (galeria) ============ -->
+<section class="section loja" id="lojas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="tag" data-reveal>Padrão Mais Gelada</span>
+        <h2 class="display" data-reveal><span class="lt">Duas lojas,</span><br><span class="ice">um padrão.</span></h2>
+      </div>
+      <p class="lead" data-reveal>Parede de gelo, prateleiras organizadas e geladeira caprichada em qualquer unidade da rede. Toca nas fotos para ampliar.</p>
+    </div>
+    <div class="loja__grid">
+      <figure class="ph ph--1"><img src="../img/corredor.jpg" alt="Corredor da loja com prateleiras de destilados e a parede de gelo ao fundo" loading="lazy" width="956" height="1700"><figcaption>O corredor</figcaption></figure>
+      <figure class="ph ph--2"><img src="../img/whisky.jpg" alt="Johnnie Walker Island Green e Gold Label Reserve" loading="lazy" width="900" height="1600"><figcaption>Whiskies</figcaption></figure>
+      <figure class="ph ph--3"><img src="../img/fachada-ivoti-larga.jpg" alt="Fachada laranja da Mais Gelada Ivoti" loading="lazy" width="1600" height="900"><figcaption>Fachada</figcaption></figure>
+      <figure class="ph ph--4"><img src="../img/vodka-tequila.jpg" alt="Garrafas de Absolut, José Cuervo e outras vodkas sobre o balcão" loading="lazy" width="900" height="1600"><figcaption>Destilados</figcaption></figure>
+      <figure class="ph ph--5"><img src="../img/loja.jpg" alt="Interior com freezer de congelados, gôndola central e a parede de gelo" loading="lazy" width="900" height="1600"><figcaption>Conveniência</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada"><button type="button" aria-label="Fechar">✕</button><img alt=""></div>
+
+<!-- ============ AVALIAÇÕES ============ -->
+<section class="section reviews" id="avaliacoes">
+  <div class="wrap reviews__grid">
+    <div class="score" data-reveal>
+      <span class="tag">Quem compra, recomenda</span>
+      <div class="score__num">4,8</div>
+      <div class="stars"><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg><svg><use href="#star"/></svg></div>
+      <small>31 avaliações no Google</small>
+    </div>
+    <div>
+      <div class="quote" data-reveal><q>Lugar incrível, cerveja gelada e atendimento top.</q><small>Cliente · Google</small></div>
+      <div class="quote" data-reveal><q>Entrega rápida, bebidas geladas e com gelo junto.</q><small>Cliente · Google</small></div>
+      <div class="quote" data-reveal><q>Bebida sempre no ponto e excelente atendimento!</q><small>Cliente · Google</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO PEDIR ============ -->
+<section class="section" id="pedir">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="tag" data-reveal>Como pedir</span>
+        <h2 class="display" data-reveal><span class="lt">Três passos</span><br><span class="ice">e tá gelada.</span></h2>
+      </div>
+      <p class="lead" data-reveal>Sem app e sem cadastro. Cada loja tem o seu WhatsApp.</p>
+    </div>
+    <div class="steps">
+      <div class="stepc" data-reveal><div class="stepc__n">01</div><h3>Escolhe a unidade</h3><p>Estância Velha ou Ivoti — a que estiver mais perto de ti.</p></div>
+      <div class="stepc" data-reveal><div class="stepc__n">02</div><h3>Chama no WhatsApp</h3><p>Manda tua lista: marcas, quantidades, gelo e carvão.</p></div>
+      <div class="stepc" data-reveal><div class="stepc__n">03</div><h3>Retira ou recebe</h3><p>Passa no balcão ou combina a tele-entrega com a loja.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISITE ============ -->
+<section class="section visit" id="visite" style="padding-top:0">
+  <div class="wrap visit__grid">
+    <div>
+      <span class="tag" data-reveal>Horários e endereço</span>
+      <h2 class="display" data-reveal><span class="lt">Te espera</span><br><span class="ice">gelada.</span></h2>
+      <div class="tabs" role="tablist" aria-label="Unidade" id="tabs" data-reveal></div>
+      <dl class="info" data-reveal>
+        <div class="info__row"><dt>Endereço</dt><dd><span id="v-addr">—</span><small id="v-city">—</small></dd></div>
+        <div class="info__row"><dt>Horários</dt><dd><ul class="hours" id="v-hours"></ul><span class="status"><i class="dot" id="v-dot"></i><span id="v-status">—</span></span></dd></div>
+        <div class="info__row"><dt>Contato</dt><dd><a id="v-wa" href="#" target="_blank" rel="noopener">—</a><small id="v-tel">—</small></dd></div>
+      </dl>
+    </div>
+    <div class="map" data-reveal>
+      <iframe id="map-frame" title="Mapa da unidade Mais Gelada" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map__pin">
+        <div><strong id="v-name">Mais Gelada</strong><span id="v-short">—</span></div>
+        <a class="btn btn--flame btn--sm" id="route-btn" href="#" target="_blank" rel="noopener"><svg><use href="#pin"/></svg>Traçar rota</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRANQUIA ============ -->
+<div class="fr-wrap" id="franquia">
+  <section class="fr" data-reveal>
+    <span class="fr__plus" aria-hidden="true"></span>
+    <div>
+      <span class="tag">Seja um franqueado</span>
+      <h2 class="display"><span class="lt">Leva a</span><br><span class="ice">+Gelada</span><br><span class="lt">pra tua cidade.</span></h2>
+    </div>
+    <div>
+      <p>A rede Mais Gelada está crescendo. Quer saber como abrir uma unidade na tua cidade? Fala com a gente.</p>
+      <a class="btn btn--flame" id="franchise-btn" href="#" target="_blank" rel="noopener">Quero ser franqueado <svg><use href="#arrow"/></svg></a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final" id="final">
+  <div class="final__media"><img src="../img/corredor.jpg" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <span class="tag" data-reveal>Teu pedido</span>
+    <h2 class="display" data-reveal><span class="lt">Bateu a sede?</span><br><span class="ice">Chama a +Gelada.</span></h2>
+    <p class="lead" data-reveal>Escolhe a loja e manda tua lista. A gente separa.</p>
+    <div data-reveal><span class="magnet"><a class="btn btn--flame js-pick" href="#unidades"><svg><use href="#wa"/></svg>Fazer meu pedido</a></span></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="brand"><svg class="seal" aria-hidden="true"><use href="#mark"/></svg><span class="brand__txt"><span class="brand__name"><b>+</b>Gelada</span><span class="brand__sub">Rede de conveniências</span></span></div>
+        <p>Destilados premium, cervejas, vinhos, gelo e conveniência. Unidades em Estância Velha e Ivoti/RS.</p>
+      </div>
+      <div class="footer__cols">
+        <div><h4>Navegar</h4><a href="#unidades">Unidades</a><a href="#selecao">Seleção</a><a href="#avaliacoes">Avaliações</a><a href="#franquia">Franquia</a></div>
+        <div id="foot-units"><h4>Unidades</h4></div>
+        <div><h4>Siga</h4><a href="https://www.instagram.com/maisgelada.oficial/" target="_blank" rel="noopener">@maisgelada.oficial</a></div>
+      </div>
+    </div>
+    <div class="legal"><b>18+</b><span>Proibida a venda de bebidas alcoólicas para menores de 18 anos. Se beber, não dirija.</span></div>
+    <div class="footer__bottom">
+      <div>© <span id="year"></span> Mais Gelada · Rede de conveniências</div>
+      <div>Site por <a href="https://flypi.com.br" target="_blank" rel="noopener">Flypi Enterprise</a></div>
+    </div>
+  </div>
+</footer>
+
+<a class="fab js-pick" id="fab" href="#unidades" aria-label="Pedir pelo WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* =========================================================
+   CONFIG — dados das fichas do Google Maps de cada unidade
+   hours: [abre, fecha] em horas decimais; passar da meia-noite = 24 + hora (26 = 02h).
+   null = fechado. 0 = domingo.
+   ========================================================= */
+const CONFIG = {
+  timezone: 'America/Sao_Paulo',
+  instagram: 'https://www.instagram.com/maisgelada.oficial/',
+  franchiseLink: 'https://ig.me/m/maisgelada.oficial',   // TODO confirmar canal oficial para interessados em franquia
+  ageGate: true,
+  units: [
+    {
+      id: 'estancia',
+      name: 'Estância Velha',
+      whatsapp: '5551936183538',                         // (51) 93618-3538 — ficha do Google e fachada. TODO confirmar que é WhatsApp
+      phoneLabel: '(51) 93618-3538',
+      landline: '(51) 3600-2728',                        // fixo pintado na fachada
+      address: 'Av. Walter Klein, 1114 — Lago Azul',
+      city: 'Estância Velha · RS · CEP 93612-280',
+      mapsQuery: 'Mais Gelada, Av. Walter Klein, 1114 - Lago Azul, Estância Velha - RS, 93612-280',
+      lat: -29.6633074, lng: -51.1898153,
+      photo: '../img/fachada-estancia.jpg',
+      hours: { 0: [10, 18], 1: [10, 22], 2: [10, 22], 3: [10, 22], 4: [10, 24], 5: [10, 26], 6: [10, 26] },
+    },
+    {
+      id: 'ivoti',
+      name: 'Ivoti',
+      whatsapp: '5551936193415',                         // (51) 93619-3415 — ficha do Google e fachada. TODO confirmar que é WhatsApp
+      phoneLabel: '(51) 93619-3415',
+      landline: '(51) 3600-4516',                        // fixo pintado na fachada
+      address: 'Av. Pres. Lucena, 1945 · sala 3 — Harmonia',
+      city: 'Ivoti · RS · CEP 93900-991',
+      mapsQuery: 'Mais Gelada ivoti, Av. Pres. Lucena, 1945 - sala 3 - Harmonia, Ivoti - RS, 93900-991',
+      lat: -29.6066041, lng: -51.1632465,
+      photo: '../img/fachada-ivoti-larga.jpg',
+      // TODO confirmar: o Google também lista "quinta 00h–02h" para Ivoti
+      hours: { 0: [9, 20], 1: [10, 22], 2: [10, 22], 3: [10, 22], 4: [10, 26], 5: [10, 26], 6: [10, 24] },
+    },
+  ],
+};
+
+/* ---------- utilidades ---------- */
+const $ = s => document.querySelector(s);
+const DAYS = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+const fmt = h => { const hh = Math.floor(h) % 24, mm = Math.round(h % 1 * 60); return `${String(hh).padStart(2,'0')}h${mm ? String(mm).padStart(2,'0') : ''}`; };
+const waLink = (u, msg) => `https://wa.me/${u.whatsapp}?text=${encodeURIComponent(msg || `Olá, Mais Gelada ${u.name}! Gostaria de fazer um pedido.`)}`;
+const routeLink = u => `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(u.mapsQuery)}`;
+const icon = id => `<svg><use href="#${id}"/></svg>`;
+
+// dia e hora atuais no fuso das lojas
+const NOW = (() => {
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: CONFIG.timezone, weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date());
+  const get = t => parts.find(p => p.type === t).value;
+  return { day: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday')), h: (+get('hour') % 24) + (+get('minute')) / 60 };
+})();
+
+function statusOf(u){
+  const { day, h } = NOW;
+  const t = u.hours[day], prev = u.hours[(day + 6) % 7];
+  // madrugada: ainda vale o horário de ontem (ex.: sexta até 02h)
+  const close = (prev && prev[1] > 24 && h < prev[1] - 24) ? prev[1] : (t && h >= t[0] && h < t[1]) ? t[1] : null;
+  if (close) return { open: true, text: `Aberto agora · até ${fmt(close)}`, short: `Aberto · até ${fmt(close)}` };
+  if (t && h < t[0]) return { open: false, text: `Fechado · abre hoje às ${fmt(t[0])}`, short: `Abre às ${fmt(t[0])}` };
+  let d = 1; while (d < 8 && !u.hours[(day + d) % 7]) d++;
+  const nd = (day + d) % 7, when = d === 1 ? 'amanhã' : DAYS[nd].toLowerCase();
+  return { open: false, text: `Fechado · abre ${when} às ${fmt(u.hours[nd][0])}`, short: `Abre ${when} ${fmt(u.hours[nd][0])}` };
+}
+const todayHours = u => { const t = u.hours[NOW.day]; return t ? `${fmt(t[0])} – ${fmt(t[1])}` : 'Fechado'; };
+const statusHTML = (u, long) => { const s = statusOf(u); return `<span class="status"><i class="dot${s.open ? '' : ' closed'}"></i><span>${long ? s.text : s.short}</span></span>`; };
+
+/* ---------- render: hero, unidades, escolha, rodapé ---------- */
+$('#hero-units').innerHTML = CONFIG.units.map(u => `
+  <a class="hu" href="#unidades">
+    <small>Mais Gelada</small>
+    <strong>${u.name} ${icon('arrow')}</strong>
+    ${statusHTML(u)}
+  </a>`).join('');
+
+$('#chip-list').innerHTML = CONFIG.units.map(u => `<li><span>${u.name}</span>${statusHTML(u)}</li>`).join('');
+
+$('#units-grid').innerHTML = CONFIG.units.map(u => `
+  <article class="ucard" id="u-${u.id}" data-reveal>
+    <div class="ucard__media">
+      <img src="${u.photo}" alt="Fachada da Mais Gelada ${u.name}" loading="lazy">
+      <div class="ucard__badges"><span class="pill">${u.city.split(' · CEP')[0]}</span><span class="pill pill--near">Mais perto de ti</span></div>
+    </div>
+    <div class="ucard__body">
+      <div><span class="ucard__n">Mais Gelada</span><h3>${u.name}</h3></div>
+      ${statusHTML(u, true)}
+      <dl>
+        <div><dt>Endereço</dt><dd>${u.address}</dd></div>
+        <div><dt>Hoje</dt><dd>${todayHours(u)}</dd></div>
+        <div><dt>Telefone</dt><dd>${u.phoneLabel}</dd></div>
+      </dl>
+      <div class="ucard__ctas">
+        <a class="btn btn--flame btn--sm" href="${waLink(u)}" target="_blank" rel="noopener">${icon('wa')}WhatsApp</a>
+        <a class="btn btn--line btn--sm" href="${routeLink(u)}" target="_blank" rel="noopener">${icon('pin')}Rota</a>
+        <a class="btn btn--line btn--sm js-show" data-unit="${u.id}" href="#visite">Horários</a>
+      </div>
+    </div>
+  </article>`).join('');
+
+$('#pick-list').innerHTML = CONFIG.units.map(u => `
+  <a class="pick__opt" href="${waLink(u)}" target="_blank" rel="noopener">
+    <div><strong>${u.name}</strong>${statusHTML(u)}</div>
+    <span class="pick__go">${icon('wa')}</span>
+  </a>`).join('');
+
+$('#foot-units').innerHTML += CONFIG.units.map(u => `<p><b>${u.name}</b>${u.address.split(' — ')[0]} · <a href="${waLink(u)}" target="_blank" rel="noopener" style="display:inline">${u.phoneLabel}</a></p>`).join('');
+$('#franchise-btn').href = CONFIG.franchiseLink;
+$('#year').textContent = new Date().getFullYear();
+
+/* ---------- horários e mapa por unidade ---------- */
+const tabs = $('#tabs');
+tabs.innerHTML = CONFIG.units.map(u => `<button type="button" role="tab" data-unit="${u.id}">${u.name}</button>`).join('');
+function showUnit(id){
+  const u = CONFIG.units.find(x => x.id === id) || CONFIG.units[0];
+  tabs.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.unit === u.id));
+  $('#v-addr').textContent = u.address;
+  $('#v-city').textContent = u.city;
+  $('#v-hours').innerHTML = [1,2,3,4,5,6,0].map(d => { const v = u.hours[d];
+    return `<li class="${d === NOW.day ? 'today' : ''}"><span>${DAYS[d]}</span><span>${v ? fmt(v[0]) + ' – ' + fmt(v[1]) : 'Fechado'}</span></li>`; }).join('');
+  const s = statusOf(u); $('#v-status').textContent = s.text; $('#v-dot').classList.toggle('closed', !s.open);
+  $('#v-wa').textContent = u.phoneLabel + ' · WhatsApp'; $('#v-wa').href = waLink(u);
+  $('#v-tel').innerHTML = `Fixo <a href="tel:+55${u.landline.replace(/\D/g, '')}">${u.landline}</a>`;
+  $('#v-name').textContent = 'Mais Gelada ' + u.name;
+  $('#v-short').textContent = u.address.split(' — ')[0];
+  $('#route-btn').href = routeLink(u);
+  $('#map-frame').src = `https://maps.google.com/maps?q=${encodeURIComponent(u.mapsQuery)}&z=16&output=embed`;
+}
+tabs.addEventListener('click', e => { const b = e.target.closest('button'); if (b) showUnit(b.dataset.unit); });
+showUnit(CONFIG.units[0].id);
+
+/* ---------- unidade mais perto (só quando a pessoa pede) ---------- */
+$('#near-btn').addEventListener('click', () => {
+  const txt = $('#near-text');
+  if (!navigator.geolocation) { txt.textContent = 'Teu navegador não informa a localização. Confere os endereços acima.'; return; }
+  txt.textContent = 'Calculando…';
+  navigator.geolocation.getCurrentPosition(pos => {
+    const { latitude: a, longitude: b } = pos.coords;
+    const km = u => { const R = 6371, r = x => x * Math.PI / 180, dLat = r(u.lat - a), dLng = r(u.lng - b);
+      return 2 * R * Math.asin(Math.sqrt(Math.sin(dLat/2)**2 + Math.cos(r(a)) * Math.cos(r(u.lat)) * Math.sin(dLng/2)**2)); };
+    const list = CONFIG.units.map(u => ({ u, d: km(u) })).sort((x, y) => x.d - y.d);
+    document.querySelectorAll('.ucard').forEach(c => c.classList.remove('is-near'));
+    $('#u-' + list[0].u.id).classList.add('is-near');
+    txt.innerHTML = `<strong>A mais perto é ${list[0].u.name}</strong> — cerca de ${list[0].d.toFixed(1).replace('.', ',')} km em linha reta.`;
+    showUnit(list[0].u.id);
+  }, () => { txt.textContent = 'Não deu para pegar a localização. Confere os endereços acima.'; }, { timeout: 10000 });
+});
+
+/* ---------- escolher unidade (WhatsApp) ---------- */
+(function picker(){
+  const pick = $('#pick');
+  const close = () => { pick.classList.remove('is-open'); lenis && lenis.start(); };
+  document.querySelectorAll('.js-pick').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault(); pick.classList.add('is-open'); lenis && lenis.stop(); pick.querySelector('.pick__opt').focus();
+  }));
+  pick.addEventListener('click', e => { if (e.target === pick || e.target.closest('.pick__x')) close(); });
+  pick.querySelectorAll('.pick__opt').forEach(a => a.addEventListener('click', close));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && pick.classList.contains('is-open')) close(); });
+})();
+
+/* ---------- lightbox ---------- */
+(function lightbox(){
+  const lb = $('#lightbox'); const img = lb.querySelector('img');
+  const close = () => { lb.classList.remove('is-open'); lenis && lenis.start(); };
+  document.querySelectorAll('.ph').forEach(f => f.addEventListener('click', () => {
+    const src = f.querySelector('img'); img.src = src.currentSrc || src.src; img.alt = src.alt;
+    lb.classList.add('is-open'); lenis && lenis.stop();
+  }));
+  lb.addEventListener('click', close);
+  addEventListener('keydown', e => { if (e.key === 'Escape' && lb.classList.contains('is-open')) close(); });
+})();
+
+/* ---------- setup ---------- */
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+if (reduced || !hasGsap) document.documentElement.classList.add('reduced');
+
+let lenis = null;
+if (!reduced && typeof Lenis !== 'undefined') {
+  lenis = new Lenis({ duration: 1.15, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+  if (hasGsap) {
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf);
+  }
+}
+document.querySelectorAll('a[href^="#"]:not(.js-pick)').forEach(a => a.addEventListener('click', e => {
+  const id = a.getAttribute('href'); if (id.length < 2) return;
+  const el = document.querySelector(id); if (!el) return;
+  e.preventDefault();
+  if (a.dataset.unit) showUnit(a.dataset.unit);
+  if (lenis) lenis.scrollTo(el, { offset: id === '#top' ? 0 : -70 }); else el.scrollIntoView();
+}));
+
+/* ---------- nav + fab ---------- */
+(function nav(){
+  const nav = $('#nav'); const fab = $('#fab');
+  let last = 0;
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('is-scrolled', y > 40);
+    nav.classList.toggle('is-hidden', y > last && y > 400);
+    fab.classList.toggle('is-in', y > window.innerHeight * .7);
+    last = y;
+  };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+
+/* ---------- 18+ + loader + entrada ---------- */
+function startIntro(){
+  if (!hasGsap || reduced) { $('#loader').remove(); return; }
+  const n = { v: 0 }; const out = $('#loader-n');
+  gsap.set('.loader .l-ring', { strokeDasharray: 1, strokeDashoffset: 1 });
+  gsap.set('#hero-media img', { scale: 1.15 });
+  gsap.set('#frost', { opacity: 1 });
+  const tl = gsap.timeline();
+  tl.to('.loader .l-ring', { strokeDashoffset: 0, duration: 1.3, ease: 'power2.inOut' })
+    .to(n, { v: 100, duration: 1.3, ease: 'power2.inOut', onUpdate: () => out.textContent = Math.round(n.v) }, '<')
+    .to('.loader .l-plus', { opacity: 1, scale: 1, duration: .5, ease: 'back.out(2)', startAt: { scale: .4 } }, '-=.25')
+    .to('#loader', { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'expo.inOut' }, '+=.15')
+    .set('#loader', { display: 'none' })
+    .from('#hero-media', { clipPath: 'inset(100% 0 0 0)', duration: 1.3, ease: 'expo.inOut' }, '-=.7')
+    .to('#hero-media img', { scale: 1, duration: 2.4, ease: 'expo.out' }, '-=.6')
+    .to('#frost', { opacity: 0, duration: 2.2, ease: 'power2.inOut' }, '<.2')
+    .from('.hero h1 .line > span', { yPercent: 115, duration: 1.2, stagger: .09, ease: 'expo.out' }, '<-.3')
+    .from('.hero-in', { y: 24, opacity: 0, duration: 1, stagger: .08, ease: 'power3.out' }, '<.35');
+}
+
+(function gate(){
+  const age = $('#age');
+  let ok = false; try { ok = localStorage.getItem('mg-age') === '1'; } catch(e) {}
+  if (!CONFIG.ageGate || ok) { startIntro(); return; }
+  age.classList.add('is-open'); lenis && lenis.stop();
+  $('#loader').style.display = 'none';
+  $('#age-yes').focus();
+  $('#age-yes').addEventListener('click', () => {
+    try { localStorage.setItem('mg-age', '1'); } catch(e) {}
+    age.classList.remove('is-open'); lenis && lenis.start();
+    $('#loader').style.display = '';
+    startIntro();
+  });
+})();
+
+/* ---------- animações de rolagem ---------- */
+if (hasGsap && !reduced) {
+  gsap.registerPlugin(ScrollTrigger);
+  const mm = gsap.matchMedia();
+
+  gsap.to('#hero-media img', { yPercent: -8, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.hero__text', { yPercent: -10, opacity: .25, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'center top', end: 'bottom top', scrub: true } });
+
+  gsap.utils.toArray('[data-reveal]').forEach(el => {
+    gsap.to(el, { y: 0, opacity: 1, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } });
+  });
+
+  // marquee: acelera e inverte com a rolagem
+  const ticker = gsap.fromTo('#ticker', { xPercent: 0 }, { xPercent: -50, duration: 38, ease: 'none', repeat: -1 });
+  let boost = 1, dir = 1;
+  ScrollTrigger.create({ onUpdate: s => { dir = s.direction; boost = 1 + Math.min(Math.abs(s.getVelocity()) / 350, 5); } });
+  gsap.ticker.add(() => { ticker.timeScale(boost * dir); boost += (1 - boost) * .05; });
+
+  // manifesto palavra por palavra
+  (function(){
+    const p = $('#about-text');
+    const walk = (node, tag) => [...node.childNodes].flatMap(n => {
+      if (n.nodeType === 3) return n.textContent.split(/(\s+)/).map(t => t.trim() ? (tag ? `<${tag} class="w">${t}</${tag}>` : `<span class="w">${t}</span>`) : t);
+      return walk(n, n.tagName.toLowerCase());
+    });
+    p.innerHTML = walk(p, null).join('');
+    gsap.to(p.querySelectorAll('.w'), { opacity: 1, stagger: .1, ease: 'none', scrollTrigger: { trigger: p, start: 'top 78%', end: 'bottom 50%', scrub: true } });
+  })();
+
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const target = +el.dataset.count; const pad = +el.dataset.pad || 0; const o = { v: 0 };
+    el.textContent = String(0).padStart(pad, '0');
+    ScrollTrigger.create({ trigger: el, start: 'top 92%', once: true, onEnter: () =>
+      gsap.to(o, { v: target, duration: 1.6, ease: 'power3.out', onUpdate: () => el.textContent = String(Math.round(o.v)).padStart(pad, '0') }) });
+  });
+
+  // fachadas das unidades: parallax
+  gsap.utils.toArray('.ucard__media img').forEach(img => gsap.fromTo(img, { yPercent: -5 }, { yPercent: 5, ease: 'none', scrollTrigger: { trigger: img.parentNode, start: 'top bottom', end: 'bottom top', scrub: true } }));
+
+  // seleção: rolagem horizontal presa (desktop)
+  mm.add('(min-width: 861px)', () => {
+    const track = $('#sel-track');
+    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth);
+    gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: {
+      trigger: '#sel-pin', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: .8, invalidateOnRefresh: true,
+      onUpdate: s => gsap.set('#sel-bar', { scaleX: s.progress })
+    }});
+  });
+
+  gsap.utils.toArray('.ph').forEach((ph, i) => {
+    gsap.from(ph, { clipPath: 'inset(100% 0% 0% 0% round 16px)', duration: 1.4, delay: (i % 3) * .08, ease: 'expo.out', scrollTrigger: { trigger: ph, start: 'top 92%' } });
+    gsap.fromTo(ph.querySelector('img'), { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: ph, start: 'top bottom', end: 'bottom top', scrub: true } });
+  });
+
+  gsap.fromTo('.fr__plus', { rotate: 0 }, { rotate: 90, ease: 'none', scrollTrigger: { trigger: '.fr', start: 'top bottom', end: 'bottom top', scrub: true } });
+  gsap.fromTo('.final__media img', { scale: 1.2 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.final', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.magnet').forEach(m => {
+      const xTo = gsap.quickTo(m, 'x', { duration: .5, ease: 'power3' }), yTo = gsap.quickTo(m, 'y', { duration: .5, ease: 'power3' });
+      m.addEventListener('mousemove', e => { const r = m.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * .3); yTo((e.clientY - r.top - r.height / 2) * .4); });
+      m.addEventListener('mouseleave', () => { xTo(0); yTo(0); });
+    });
+  }
+
+  addEventListener('load', () => ScrollTrigger.refresh());
+  document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+}
+</script>
+</body>
+</html>
