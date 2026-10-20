@@ -31,6 +31,7 @@
     {
       "@type": "LiquorStore",
       "name": "Mais Gelada Estância Velha",
+      "potentialAction": { "@type": "OrderAction", "target": "https://maisgelada.comercio.net.br/#/catalogo" },
       "parentOrganization": { "@id": "#rede" },
       "image": "img/fachada-estancia.jpg",
       "telephone": "+55 51 93618-3538",
@@ -396,6 +397,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .reduced .manifesto .w{opacity:1}
 .reduced .fab{transition:none}
 
+/* ---------- app de pedidos ---------- */
+.appbox{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(28px,5vw,80px);align-items:center;padding:clamp(28px,5vw,72px);border-radius:var(--r-card);background:var(--ash-2);border:1px solid var(--hair);overflow:hidden}
+.appbox h2{font-size:clamp(46px,6.2vw,98px);margin:20px 0 22px}
+.appbox .serif{font-size:clamp(22px,2vw,30px);color:var(--ink-2);max-width:30ch}
+.appcats{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 30px}
+.appcats li{padding:8px 14px;border-radius:var(--r-pill);border:1px solid var(--hair)}
+.appbox__note{margin-top:16px;color:var(--muted)}
+.appbox__phone{display:flex;justify-content:center}
+.phone{width:min(330px,100%);padding:10px;border-radius:46px;background:#04080e;border:1px solid var(--hair);will-change:transform}
+.phone img{width:100%;height:auto;aspect-ratio:750/1624;object-fit:cover;border-radius:36px}
+.opt{flex-wrap:wrap}
+.opt__btns{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:860px){.appbox{grid-template-columns:1fr;border-radius:32px}.phone{width:min(290px,78vw)}}
+@media (max-width:420px){.opt{flex-direction:column;align-items:stretch;border-radius:28px;padding:16px}.opt__btns{justify-content:stretch}.opt__btns .pill{flex:1}.appbox .pill{width:100%}.ucard__ctas .pill:nth-child(4){grid-column:1/-1}}
+
 /* =========================================================
    RESPONSIVO — ajustes finos por faixa de tela
    ========================================================= */
@@ -534,6 +550,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
     <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.6l-6.4 3.5L7 14l-5.3-5 7.2-.9z"/></symbol>
     <symbol id="arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M3 4h2.2l2.1 10.2a1.5 1.5 0 0 0 1.5 1.2h8.4a1.5 1.5 0 0 0 1.5-1.1L21 8H6.1"/><circle cx="9.5" cy="19.5" r="1.4" fill="currentColor"/><circle cx="17" cy="19.5" r="1.4" fill="currentColor"/></symbol>
     <symbol id="locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path stroke="currentColor" stroke-width="1.6" d="M12 2v4M12 18v4M2 12h4M18 12h4"/></symbol>
   </defs>
 </svg>
@@ -557,9 +574,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="modal" id="pick" role="dialog" aria-modal="true" aria-labelledby="pick-title">
   <div class="modal__card">
     <button class="circle x" type="button" aria-label="Fechar">✕</button>
-    <span class="mono">Pedir pelo WhatsApp</span>
+    <span class="mono">Fazer pedido</span>
     <h2 id="pick-title" class="serif">Pra qual <em>loja?</em></h2>
-    <p>Escolhe a unidade mais perto de ti. A conversa abre direto no WhatsApp da loja.</p>
+    <p>Escolhe a unidade e como prefere pedir: pelo app de pedidos ou direto no WhatsApp da loja.</p>
     <div id="pick-list"></div>
   </div>
 </div>
@@ -582,11 +599,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <nav class="nav__links" aria-label="Principal">
       <a href="#unidades">Unidades</a>
       <a href="#selecao">Seleção</a>
-      <a href="#avaliacoes">Avaliações</a>
+      <a href="#app">App</a>
       <a href="#visite">Horários</a>
       <a href="#franquia">Franquia</a>
     </nav>
-    <a class="circle js-pick" href="#unidades" aria-label="Pedir pelo WhatsApp"><svg><use href="#wa"/></svg></a>
+    <a class="circle js-pick" href="#unidades" aria-label="Fazer pedido"><svg><use href="#cart"/></svg></a>
   </div>
 </header>
 
@@ -605,7 +622,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <p class="serif">Da região, <em>perto de ti.</em></p>
         <p class="body">Destilados premium, cervejas trincando, vinhos, gelo e conveniência. Duas lojas, o mesmo padrão.</p>
         <div class="hero__ctas">
-          <span class="magnet"><a class="pill pill--ink js-pick" href="#unidades"><svg><use href="#wa"/></svg>Pedir pelo WhatsApp</a></span>
+          <span class="magnet"><a class="pill pill--ink js-pick" href="#unidades"><svg><use href="#cart"/></svg>Fazer pedido</a></span>
           <a class="pill" href="#unidades">Ver unidades</a>
         </div>
       </div>
@@ -620,7 +637,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <span class="mono">Agora na rede</span>
         <h3 class="serif">Duas lojas, <em>abertas hoje.</em></h3>
         <ul id="chip-list"></ul>
-        <a class="pill pill--ink js-pick" href="#unidades"><svg><use href="#wa"/></svg>Chamar uma loja</a>
+        <a class="pill pill--ink js-pick" href="#unidades"><svg><use href="#cart"/></svg>Fazer pedido</a>
       </aside>
     </div>
   </div>
@@ -663,6 +680,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
+<!-- ============ APP DE PEDIDOS ============ -->
+<section class="section" id="app" style="padding-top:0">
+  <div class="wrap">
+    <div class="appbox" data-reveal>
+      <div>
+        <span class="mono">App de pedidos</span>
+        <h2 class="display">O catálogo inteiro <span class="ice">no teu celular.</span></h2>
+        <p class="serif">Busca o produto, vê o preço na hora, monta o carrinho e <em>finaliza o pedido pelo app.</em></p>
+        <ul class="appcats mono"><li>Cervejas</li><li>Destilados</li><li>Vinhos</li><li>Espumantes</li><li>Gelo</li><li>Energéticos</li><li>Congelados</li><li>Picolés</li></ul>
+        <a class="pill pill--ink" id="app-btn" href="#" target="_blank" rel="noopener"><svg><use href="#cart"/></svg>Abrir o app de pedidos</a>
+        <p class="mono appbox__note" id="app-note"></p>
+      </div>
+      <div class="appbox__phone"><div class="phone"><img src="img/app-catalogo.jpg" alt="Tela do app de pedidos da Mais Gelada, com busca e catálogo de produtos" loading="lazy" width="750" height="1624"></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ SELEÇÃO ============ -->
 <section class="sel" id="selecao">
   <div class="sel__pin" id="sel-pin">
@@ -680,7 +714,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <article class="card"><img src="img/geladeiras.jpg" alt="Geladeiras de portas de vidro cheias de cervejas e energéticos" loading="lazy" width="900" height="1600"><span class="card__n mono">04</span><div class="card__info"><h3 class="serif">Cervejas <em>trincando</em></h3><p class="mono">Long neck | lata | fardo</p></div></article>
       <article class="card"><img src="img/gelo.jpg" alt="Saco de gelo com latas de cerveja em frente às prateleiras" loading="lazy" width="956" height="1700"><span class="card__n mono">05</span><div class="card__info"><h3 class="serif">Gelo <em>&amp; carvão</em></h3><p class="mono">Churrasco | festa | evento</p></div></article>
       <article class="card"><img src="img/congelados.jpg" alt="Freezer de congelados e gôndola de doces e snacks" loading="lazy" width="900" height="1600"><span class="card__n mono">06</span><div class="card__info"><h3 class="serif"><em>Conveniência</em></h3><p class="mono">Congelados | snacks | água</p></div></article>
-      <article class="card card--cta"><span class="mono">07 — Teu pedido</span><div><p class="display">Monta teu pedido.</p><p class="serif">Manda a lista no WhatsApp da tua loja <em>que a gente separa.</em></p><a class="pill js-pick" href="#unidades"><svg><use href="#wa"/></svg>Chamar agora</a></div></article>
+      <article class="card card--cta"><span class="mono">07 — Teu pedido</span><div><p class="display">Monta teu pedido.</p><p class="serif">Pelo app de pedidos ou no WhatsApp <em>da tua loja.</em></p><a class="pill js-pick" href="#unidades"><svg><use href="#cart"/></svg>Fazer pedido</a></div></article>
     </div>
     <div class="wrap"><div class="sel__hint mono"><span>Role para ver</span><span class="sel__bar"><i id="sel-bar"></i></span><span>06 categorias</span></div></div>
   </div>
@@ -791,7 +825,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <span class="mono" data-reveal>Teu pedido</span>
     <h2 class="display" data-reveal>Bateu a <span class="ice">sede?</span></h2>
     <p class="serif" data-reveal>Escolhe a loja e manda tua lista. <em>A gente separa.</em></p>
-    <div data-reveal><span class="magnet"><a class="pill js-pick" href="#unidades"><svg><use href="#wa"/></svg>Fazer meu pedido</a></span></div>
+    <div data-reveal><span class="magnet"><a class="pill js-pick" href="#unidades"><svg><use href="#cart"/></svg>Fazer meu pedido</a></span></div>
   </div>
 </section>
 
@@ -805,7 +839,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <p>Rede de conveniências. Destilados premium, cervejas, vinhos, gelo e conveniência.</p>
       </div>
       <div class="footer__cols">
-        <div><p class="mono">Navegar</p><a href="#unidades">Unidades</a><a href="#selecao">Seleção</a><a href="#avaliacoes">Avaliações</a><a href="#franquia">Franquia</a></div>
+        <div><p class="mono">Navegar</p><a href="#unidades">Unidades</a><a href="#app">App de pedidos</a><a href="#selecao">Seleção</a><a href="#avaliacoes">Avaliações</a><a href="#franquia">Franquia</a></div>
         <div id="foot-units"><p class="mono">Unidades</p></div>
         <div><p class="mono">Siga</p><a href="https://www.instagram.com/maisgelada.oficial/" target="_blank" rel="noopener">@maisgelada.oficial</a></div>
       </div>
@@ -818,7 +852,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </footer>
 
-<a class="fab js-pick" id="fab" href="#unidades" aria-label="Pedir pelo WhatsApp"><svg><use href="#wa"/></svg></a>
+<a class="fab js-pick" id="fab" href="#unidades" aria-label="Fazer pedido"><svg><use href="#cart"/></svg></a>
 
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -838,6 +872,7 @@ const CONFIG = {
     {
       id: 'estancia',
       name: 'Estância Velha',
+      orderApp: 'https://maisgelada.comercio.net.br/#/catalogo',  // app de pedidos da unidade (2BW Distribuidora, Av. Walter Klein 1114)
       whatsapp: '5551936183538',                         // (51) 93618-3538 — ficha do Google e fachada. TODO confirmar que é WhatsApp
       phoneLabel: '(51) 93618-3538',
       landline: '(51) 3600-2728',                        // fixo pintado na fachada
@@ -851,6 +886,7 @@ const CONFIG = {
     {
       id: 'ivoti',
       name: 'Ivoti',
+      orderApp: null,                                    // TODO: Ivoti ainda não tem app de pedidos — por enquanto só WhatsApp
       whatsapp: '5551936193415',                         // (51) 93619-3415 — ficha do Google e fachada. TODO confirmar que é WhatsApp
       phoneLabel: '(51) 93619-3415',
       landline: '(51) 3600-4516',                        // fixo pintado na fachada
@@ -913,7 +949,8 @@ $('#units-grid').innerHTML = CONFIG.units.map(u => `
         <div><dt class="mono">Telefone</dt><dd>${u.phoneLabel}</dd></div>
       </dl>
       <div class="ucard__ctas">
-        <a class="pill pill--ink pill--sm" href="${waLink(u)}" target="_blank" rel="noopener">${icon('wa')}WhatsApp</a>
+        ${u.orderApp ? `<a class="pill pill--ink pill--sm" href="${u.orderApp}" target="_blank" rel="noopener">${icon('cart')}Pedir pelo app</a>` : ''}
+        <a class="pill pill--sm${u.orderApp ? '' : ' pill--ink'}" href="${waLink(u)}" target="_blank" rel="noopener">${icon('wa')}WhatsApp</a>
         <a class="pill pill--sm" href="${routeLink(u)}" target="_blank" rel="noopener">${icon('pin')}Rota</a>
         <a class="pill pill--sm js-show" data-unit="${u.id}" href="#visite">Horários</a>
       </div>
@@ -921,10 +958,24 @@ $('#units-grid').innerHTML = CONFIG.units.map(u => `
   </article>`).join('');
 
 $('#pick-list').innerHTML = CONFIG.units.map(u => `
-  <a class="opt" href="${waLink(u)}" target="_blank" rel="noopener">
+  <div class="opt">
     <div><strong>${u.name}</strong>${statusHTML(u)}</div>
-    <span class="circle">${icon('wa')}</span>
-  </a>`).join('');
+    <div class="opt__btns">
+      ${u.orderApp ? `<a class="pill pill--ink pill--sm" href="${u.orderApp}" target="_blank" rel="noopener">${icon('cart')}App</a>` : ''}
+      <a class="pill pill--sm${u.orderApp ? '' : ' pill--ink'}" href="${waLink(u)}" target="_blank" rel="noopener">${icon('wa')}WhatsApp</a>
+    </div>
+  </div>`).join('');
+
+/* ---------- app de pedidos ---------- */
+(function orderApp(){
+  const withApp = CONFIG.units.filter(u => u.orderApp), without = CONFIG.units.filter(u => !u.orderApp);
+  if (!withApp.length) { $('#app').remove(); document.querySelectorAll('a[href="#app"]').forEach(a => a.remove()); return; }
+  const btn = $('#app-btn');
+  if (withApp.length === 1) btn.href = withApp[0].orderApp;
+  else { btn.classList.add('js-pick'); btn.removeAttribute('target'); btn.href = '#unidades'; }
+  $('#app-note').textContent = `App da unidade ${withApp.map(u => u.name).join(' e ')}` +
+    (without.length ? ` · ${without.map(u => u.name).join(' e ')}: pedido pelo WhatsApp` : '');
+})();
 
 $('#foot-units').innerHTML += CONFIG.units.map(u => `<p><b>${u.name}</b>${u.address.split(' — ')[0]} · <a href="${waLink(u)}" target="_blank" rel="noopener" style="display:inline">${u.phoneLabel}</a></p>`).join('');
 $('#franchise-btn').href = CONFIG.franchiseLink;
@@ -968,15 +1019,15 @@ $('#near-btn').addEventListener('click', () => {
   }, () => { txt.textContent = 'Não deu para pegar a localização. Confere os endereços acima.'; }, { timeout: 10000 });
 });
 
-/* ---------- escolher unidade (WhatsApp) ---------- */
+/* ---------- escolher unidade (app ou WhatsApp) ---------- */
 (function picker(){
   const pick = $('#pick');
   const close = () => { pick.classList.remove('is-open'); lenis && lenis.start(); };
   document.querySelectorAll('.js-pick').forEach(a => a.addEventListener('click', e => {
-    e.preventDefault(); pick.classList.add('is-open'); lenis && lenis.stop(); pick.querySelector('.opt').focus();
+    e.preventDefault(); pick.classList.add('is-open'); lenis && lenis.stop(); pick.querySelector('.opt a').focus();
   }));
   pick.addEventListener('click', e => { if (e.target === pick || e.target.closest('.x')) close(); });
-  pick.querySelectorAll('.opt').forEach(a => a.addEventListener('click', close));
+  pick.querySelectorAll('.opt a').forEach(a => a.addEventListener('click', close));
   addEventListener('keydown', e => { if (e.key === 'Escape' && pick.classList.contains('is-open')) close(); });
 })();
 
@@ -1103,6 +1154,7 @@ if (hasGsap && !reduced) {
       gsap.to(o, { v: target, duration: 1.6, ease: 'power3.out', onUpdate: () => el.textContent = String(Math.round(o.v)).padStart(pad, '0') }) });
   });
 
+  gsap.fromTo('.appbox .phone', { yPercent: 8 }, { yPercent: -8, ease: 'none', scrollTrigger: { trigger: '.appbox', start: 'top bottom', end: 'bottom top', scrub: true } });
   gsap.utils.toArray('.ucard__media img').forEach(img => gsap.fromTo(img, { yPercent: -5 }, { yPercent: 5, ease: 'none', scrollTrigger: { trigger: img.parentNode, start: 'top bottom', end: 'bottom top', scrub: true } }));
 
   // seleção: rolagem horizontal presa (desktop)
